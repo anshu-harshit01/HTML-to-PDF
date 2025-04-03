@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: row" id="content-div">
+      <div
+        style="
+          border: 5px solid rgba(0, 0, 0, 0.1);
+          width: 100%;
+          height: 100vh;
+          overflow: auto;
+          display: flex;
+          justify-content: center;
+          background-color: gray;
+          position: relative;
+          padding: 100px;
+          scroll-behavior: auto;
+        "
+      >
+        <div>
+          <div
+            style="
+              height: 842px;
+              width: 1024px;
+              overflow: hidden;
+              background-color: rgb(218, 215, 215);
+              padding: 1px;
+              display: flex;
+              flex-direction: column;
+              box-sizing: border-box;
+              background-image: url('https://universemagazine.com/wp-content/uploads/2022/08/zm4nfgq29yi91-1536x1536-1.jpg');
+              object-fit: cover;
+              border: none;
+            "
+          >
+            <div
+              class="resizable-container"
+              style="
+                width: 100%;
+                height: auto;
+                border: none;
+                display: flex;
+                flex-flow: column wrap;
+                padding: 2px;
+                margin: 0px;
+                position: relative;
+                justify-content: flex-start;
+                align-items: flex-start;
+                background-image: none;
+                object-fit: cover;
+                background-size: cover;
+                background-position: center center;
+                overflow: clip;
+                box-sizing: border-box;
+              "
+            >
+              <div
+                class="layout-textbox"
+                style="
+                  font-size: small;
+                  width: 200px;
+                  padding: 0px;
+                  margin: 0px;
+                  border: none;
+                  display: inline-block;
+                  cursor: grab;
+                  position: relative;
+                  transition: border 0.2s ease-in-out;
+                  background-color: rgb(255, 255, 255);
+                "
+              >
+                <div
+                  disabled=""
+                  contenteditable="false"
+                  style="text-overflow: ellipsis"
+                >
+                  9840
+                </div>
+              </div>
+              <div
+                class="layout-textbox"
+                style="
+                  font-size: 15px;
+                  width: 200px;
+                  padding: 0px;
+                  margin: 0px;
+                  border: none;
+                  display: inline-block;
+                  cursor: grab;
+                  position: relative;
+                  transition: border 0.2s ease-in-out;
+                  background-color: rgb(255, 255, 255);
+                "
+              >
+                <div
+                  disabled=""
+                  contenteditable="false"
+                  style="text-overflow: ellipsis"
+                >
+                  Enter your text...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

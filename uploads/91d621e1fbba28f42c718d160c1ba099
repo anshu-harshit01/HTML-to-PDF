@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        height: 559px;
+        width: 395px;
+        overflow: hidden;
+        background-color: rgb(230, 230, 234);
+        padding: 1px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        background-image: url('https://i.pinimg.com/736x/de/8c/a2/de8ca279e890e023d44b9bea824ee26c.jpg');
+        object-fit: cover;
+        border: none;
+      "
+    >
+      <div
+        class="resizable-container"
+        style="
+          width: 100%;
+          height: auto;
+          border: none;
+          display: flex;
+          flex-flow: column wrap;
+          padding: 2px;
+          margin: 0px;
+          position: relative;
+          justify-content: flex-start;
+          align-items: center;
+          background-color: transparent;
+          background-image: none;
+          object-fit: cover;
+          background-size: cover;
+          background-position: center center;
+          overflow: clip;
+          box-sizing: border-box;
+        "
+      >
+        <div
+          class="layout-textbox"
+          style="
+            font-size: 16px;
+            width: 152px;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            display: inline-block;
+            cursor: grab;
+            position: relative;
+            transition: border 0.2s ease-in-out;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 186, 91);
+          "
+        >
+          <div
+            disabled=""
+            contenteditable="false"
+            style="
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: block;
+              width: 100%;
+            "
+          >
+            <b>Annual Bill Report</b>
+          </div>
+        </div>
+      </div>
+      <div
+        class="resizable-container"
+        style="
+          width: 100%;
+          height: auto;
+          border: none;
+          display: flex;
+          flex-flow: wrap;
+          padding: 2px;
+          margin: 0px;
+          position: relative;
+          justify-content: left;
+          align-items: flex-start;
+          background-color: transparent;
+          background-image: none;
+          object-fit: cover;
+          background-size: cover;
+          background-position: center center;
+          overflow: clip;
+          box-sizing: border-box;
+        "
+      >
+        <div
+          class="layout-textbox"
+          style="
+            font-size: 12px;
+            width: 222px;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            display: inline-block;
+            cursor: grab;
+            position: relative;
+            transition: border 0.2s ease-in-out;
+            background-color: rgb(255, 255, 255);
+          "
+        >
+          <div
+            disabled=""
+            contenteditable="false"
+            style="
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: block;
+              width: 100%;
+            "
+          >
+            Hello, Your eligible loan amount is :&nbsp;
+          </div>
+        </div>
+        <div
+          class="layout-textbox"
+          style="
+            font-size: 12px;
+            width: 222px;
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            display: inline-block;
+            cursor: grab;
+            position: relative;
+            transition: border 0.2s ease-in-out;
+            background-color: rgb(255, 255, 255);
+          "
+        >
+          <div
+            disabled=""
+            contenteditable="false"
+            style="
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: block;
+              width: 100%;
+            "
+          >
+            9840
+          </div>
+        </div>
+        <div
+          class="resizable-container"
+          style="
+            width: 100%;
+            height: auto;
+            border: none;
+            display: flex;
+            flex-flow: wrap;
+            padding: 2px;
+            margin: 0px;
+            position: relative;
+            justify-content: left;
+            align-items: flex-start;
+            background-color: transparent;
+            background-image: none;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center center;
+            overflow: clip;
+            box-sizing: border-box;
+          "
+        >
+          <div
+            class="layout-textbox"
+            style="
+              font-size: 12px;
+              width: 219px;
+              padding: 0px;
+              margin: 0px;
+              border: none;
+              display: inline-block;
+              cursor: grab;
+              position: relative;
+              transition: border 0.2s ease-in-out;
+              background-color: rgb(255, 255, 255);
+            "
+          >
+            <div
+              disabled=""
+              contenteditable="false"
+              style="
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                width: 100%;
+              "
+            >
+              Total Expenses shown :&nbsp;
+            </div>
+          </div>
+          <div
+            class="layout-textbox"
+            style="
+              font-size: 12px;
+              width: 220px;
+              padding: 0px;
+              margin: 0px;
+              border: none;
+              display: inline-block;
+              cursor: grab;
+              position: relative;
+              transition: border 0.2s ease-in-out;
+              background-color: rgb(255, 255, 255);
+            "
+          >
+            <div
+              disabled=""
+              contenteditable="false"
+              style="
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                width: 100%;
+              "
+            >
+              158
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="layout-section"
+        style="
+          width: 554px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          padding: 0px;
+          position: relative;
+          height: 5px;
+        "
+      >
+        <hr
+          style="
+            width: 100%;
+            border-width: 1px;
+            border-color: rgb(0, 0, 0);
+            border-style: solid;
+          "
+        />
+      </div>
+      <div
+        class="layout-textbox"
+        style="
+          font-size: 12px;
+          width: 139px;
+          padding: 0px;
+          margin: 0px;
+          border: none;
+          display: inline-block;
+          cursor: grab;
+          position: relative;
+          transition: border 0.2s ease-in-out;
+          background-color: rgb(255, 255, 255);
+        "
+      >
+        <div
+          disabled=""
+          contenteditable="false"
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            width: 100%;
+          "
+        >
+          Irshad
+        </div>
+      </div>
+      <div
+        class="layout-textbox"
+        style="
+          font-size: 12px;
+          width: 139px;
+          padding: 0px;
+          margin: 0px;
+          border: none;
+          display: inline-block;
+          cursor: grab;
+          position: relative;
+          transition: border 0.2s ease-in-out;
+          background-color: transparent;
+        "
+      >
+        <div
+          disabled=""
+          contenteditable="false"
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            width: 100%;
+          "
+        >
+          raja.dnagar@gmail.com
+        </div>
+      </div>
+      <div
+        class="layout-textbox"
+        style="
+          font-size: 12px;
+          width: 140px;
+          padding: 0px;
+          margin: 0px;
+          border: none;
+          display: inline-block;
+          cursor: grab;
+          position: relative;
+          transition: border 0.2s ease-in-out;
+          background-color: rgb(255, 255, 255);
+        "
+      >
+        <div
+          disabled=""
+          contenteditable="false"
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            width: 100%;
+          "
+        >
+          3/26/2025
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
