@@ -15,6 +15,10 @@ app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
         .json({ error: "File is not uploaded successfully" });
     }
 
+    // ✅ Dynamically fetch width and height from form-data fields
+    const width = req.body.width || "10cm";
+    const height = req.body.height || "20cm";
+
     const htmlFilePath = path.resolve(req.file.path);
     const htmlFileContent = fs.readFileSync(htmlFilePath, "utf-8");
 
@@ -52,12 +56,14 @@ app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
     await page.pdf({
       path: pdfPath,
       //format: "A4",
-      width:
-        (await page.evaluate(() => document.documentElement.scrollWidth)) +
-        "px",
-      height:
-        (await page.evaluate(() => document.documentElement.scrollHeight)) +
-        "px",
+      width,
+      height,
+      // width:
+      //   (await page.evaluate(() => document.documentElement.scrollWidth)) +
+      //   "px",
+      // height:
+      //   (await page.evaluate(() => document.documentElement.scrollHeight)) +
+      //   "px",
       printBackground: true,
       landscape: false, 
     });
