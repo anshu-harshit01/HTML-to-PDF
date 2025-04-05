@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer");
 const path = require("path");
 const fs = require("fs");
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const upload = multer({ dest: "uploads/" });
 
 app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
@@ -23,6 +23,7 @@ app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
     const htmlFileContent = fs.readFileSync(htmlFilePath, "utf-8");
 
     const browser = await puppeteer.launch({
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
       args: [
         "--no-sandbox",
         "--disable-setuid-sandbox",
@@ -42,7 +43,7 @@ app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
     const renderedHTML = await page.evaluate(
       () => document.documentElement.outerHTML
     );
-    console.log(renderedHTML); // Inspect this output for issues
+    //console.log(renderedHTML); // Inspect this output for issues
     // Debug to check rendered HTML
     // const renderedHTML = await page.evaluate(
     //   () => document.documentElement.outerHTML
@@ -65,7 +66,7 @@ app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
       //   (await page.evaluate(() => document.documentElement.scrollHeight)) +
       //   "px",
       printBackground: true,
-      landscape: false, 
+      landscape: false,
     });
 
     await browser.close();
@@ -84,6 +85,6 @@ app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
