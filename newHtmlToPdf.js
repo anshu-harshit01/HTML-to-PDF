@@ -1,6 +1,6 @@
 const express = require("express");
 const multer = require("multer");
-const puppeteer = require("puppeteer-core");
+const puppeteer = require("puppeteer");
 const path = require("path");
 const fs = require("fs");
 const app = express();
@@ -22,14 +22,23 @@ app.post("/generate-pdf", upload.single("htmlfile"), async (req, res) => {
     const htmlFilePath = path.resolve(req.file.path);
     const htmlFileContent = fs.readFileSync(htmlFilePath, "utf-8");
 
+    // const browser = await puppeteer.launch({
+    //   executablePath: '/usr/bin/google-chrome',
+    //   args: [
+    //     "--no-sandbox",
+    //     "--disable-setuid-sandbox",
+    //     //"--disable-blink-features=AutomationControlled",
+    //   ],
+    //   headless: "new",
+    // });
     const browser = await puppeteer.launch({
-      executablePath: '/usr/bin/google-chrome',
+      headless: 'new',
       args: [
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        //"--disable-blink-features=AutomationControlled",
-      ],
-      headless: "new",
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu'
+      ]
     });
 
     const page = await browser.newPage();
